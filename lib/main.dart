@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +15,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int number = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,36 +22,69 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Demo App Flutter'),
       ),
       body: Container(
-        height: 200,
-        color: Colors.blueGrey,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          //spaceBetween between every widget one by one
-          //spaceAround
-          //spaceEvenly space smer smer knea
-          //start left by default
-          //end push to the right
+        color: Colors.red,
+        padding: const EdgeInsets.all(30.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
+            const Text(
+              "STUDENT",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.green,
-        ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.pink,
+            const Divider(
+              thickness: 5,
+              color: Colors.black,
             ),
-
-
-
-            // Add your widgets here
+            const Text(
+              "IDENTITY CARD",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "Studies at",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "INTERNATION UNIVERSITIES",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Name",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "JOHN DOE",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "BORN",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "08/03/2000",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 20),
+                Image.file(
+                  File("C:/Users/ADMIN/Downloads/test11.jpg"),
+                  width:50,
+                  height: 50,
+                ),
+              ],
+            ),
           ],
         ),
       ),
