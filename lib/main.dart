@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.black,
             fontWeight: FontWeight.bold),
         ),
-        transform: Matrix4.rotationZ(0.2),
+        transform: Matrix4.rotationZ(0.3),
 
         padding: const EdgeInsets.all(10),
       ),
