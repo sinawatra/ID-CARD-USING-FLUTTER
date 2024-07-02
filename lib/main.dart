@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         transform: Matrix4.rotationZ(0.3),
 
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(100),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
